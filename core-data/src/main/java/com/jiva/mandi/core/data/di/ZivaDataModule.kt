@@ -1,7 +1,11 @@
 package com.jiva.mandi.core.data.di
 
-//@Module
-//@InstallIn(SingletonComponent::class)
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+
+@Module
+@InstallIn(SingletonComponent::class)
 interface ZivaDataModule {
 //
 //    @Singleton

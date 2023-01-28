@@ -36,13 +36,14 @@ android {
 
 dependencies {
     // Arch Components
-    implementation("com.google.dagger:hilt-android")
-    kapt("com.google.dagger:hilt-compiler")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android")
+    implementation(libs.kotlinx.coroutines.android)
 
-    testImplementation("junit:junit")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
+    // Local tests: jUnit, coroutines, Android runner
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
 
 
 }
