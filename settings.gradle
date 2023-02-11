@@ -16,3 +16,4 @@ rootProject.name = "Mandi"
 include ':app'
 include ':core-data'
 include ':core-model'
+include ':core-network'
