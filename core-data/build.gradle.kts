@@ -36,14 +36,11 @@ android {
 
 dependencies {
     implementation(project(mapOf("path" to ":core-model")))
+    implementation(project(mapOf("path" to ":core-network")))
 
     // Arch Components
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.retrofit.core)
-    implementation(libs.retrofit.kotlin.serialization)
 
     // Local tests: jUnit, coroutines, Android runner
     testImplementation(libs.junit)

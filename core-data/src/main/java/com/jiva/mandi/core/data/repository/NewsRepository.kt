@@ -9,7 +9,7 @@ interface NewsRepository : Syncable {
     /**
      * Returns available news resources as a stream.
      */
-    fun getNewsResourcesStream(): Flow<List<NewsResource>>
+    fun getNewsResources(): Flow<List<NewsResource>>
 
 }
 
