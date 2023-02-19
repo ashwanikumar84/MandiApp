@@ -19,32 +19,22 @@ android {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 dependencies {
-//    implementation(project(":core:common"))
-//    implementation(project(":core:model"))
+
 
     // Arch Components
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
-    implementation(libs.kotlinx.serialization.json)
-
-    implementation(libs.okhttp.logging)
-    implementation(libs.retrofit.core)
-    implementation(libs.retrofit.kotlin.serialization)
-
-//
-//    testImplementation(project(":core:testing"))
-//
-//    implementation(libs.kotlinx.coroutines.android)
 //    implementation(libs.kotlinx.serialization.json)
-//    implementation(libs.kotlinx.datetime)
-//
+
 //    implementation(libs.okhttp.logging)
 //    implementation(libs.retrofit.core)
 //    implementation(libs.retrofit.kotlin.serialization)
+
+
 }

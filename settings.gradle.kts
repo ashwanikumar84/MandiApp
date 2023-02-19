@@ -1,8 +1,8 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -13,7 +13,9 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Mandi"
-include ':app'
-include ':core-data'
-include ':core-model'
-include ':core-network'
+include(":app")
+include(":core-data")
+include(":core-network")
+include(":core-domain")
+include(":feature-selling")
+//include(":core-model")
