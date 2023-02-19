@@ -9,5 +9,4 @@ data class NetworkNewsResource(
     val content: String,
     val url: String,
     val headerImageUrl: String,
-    val topics: List<String> = listOf(),
 )

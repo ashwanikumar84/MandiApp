@@ -1,7 +1,7 @@
 package com.jiva.mandi.core.data.repository
 
 import com.jiva.mandi.core.data.Syncable
-import com.jiva.mandi.core.model.data.NewsResource
+import com.jiva.mandi.core.data.model.NewsResource
 import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository : Syncable {

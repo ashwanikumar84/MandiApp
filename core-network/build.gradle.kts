@@ -6,21 +6,27 @@ plugins {
 }
 
 android {
+    namespace = "com.jiva.mandi.core.network"
+
     compileSdk = 33
     buildFeatures {
         buildConfig = true
     }
-    namespace = "com.jiva.mandi.core.network"
+
     testOptions {
         unitTests {
             isIncludeAndroidResources = true
         }
     }
-}
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
@@ -30,11 +36,11 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
-//    implementation(libs.kotlinx.serialization.json)
 
-//    implementation(libs.okhttp.logging)
-//    implementation(libs.retrofit.core)
-//    implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.okhttp.logging)
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.kotlinx.serialization.json)
 
 
 }

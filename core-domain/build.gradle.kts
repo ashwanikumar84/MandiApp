@@ -8,6 +8,14 @@ plugins {
 android {
     compileSdk = 33
     namespace = "com.jiva.mandi.core.domain"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {

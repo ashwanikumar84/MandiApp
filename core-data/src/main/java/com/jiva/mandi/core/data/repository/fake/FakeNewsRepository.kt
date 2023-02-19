@@ -1,8 +1,8 @@
 package com.jiva.mandi.core.data.repository.fake
 
 import com.jiva.mandi.core.data.Synchronizer
+import com.jiva.mandi.core.data.model.NewsResource
 import com.jiva.mandi.core.data.repository.NewsRepository
-import com.jiva.mandi.core.model.data.NewsResource
 import kotlinx.coroutines.flow.Flow
 
 /**

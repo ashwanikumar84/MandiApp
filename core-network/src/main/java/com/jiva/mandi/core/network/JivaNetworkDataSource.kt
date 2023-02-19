@@ -6,4 +6,5 @@ interface JivaNetworkDataSource {
 
     suspend fun getNewsResources(ids: List<String>? = null): List<NetworkNewsResource>
 
+
 }
