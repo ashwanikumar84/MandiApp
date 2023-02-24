@@ -41,9 +41,12 @@ android {
 
 dependencies {
     implementation(project(mapOf("path" to ":core-domain")))
+    implementation(project(mapOf("path" to ":core-data")))
 
     // Core Android dependencies
     implementation(libs.androidx.activity.compose)
+
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // Arch Components
     implementation(libs.androidx.lifecycle.viewmodel.compose)
@@ -51,6 +54,7 @@ dependencies {
     implementation(libs.hilt.android)
 
     //compose
+    implementation(libs.androidx.compose.runtime.livedata)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
