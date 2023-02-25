@@ -11,7 +11,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 @Composable
 fun SellingScreen(sellingViewModel: SellingViewModel = hiltViewModel()) {
 
-    val newsResource = sellingViewModel.newsResource.observeAsState()
+//    val newsResource = sellingViewModel.newsResource.observeAsState()
         Log.e("value", "inside SellingScreen---------------")
 
 }
