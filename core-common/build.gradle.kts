@@ -6,8 +6,22 @@ plugins {
 }
 
 android {
+    namespace = "com.jiva.mandi.core.common"
     compileSdk = 33
-    namespace = "com.jiva.mandi.core.domain"
+
+    defaultConfig {
+        minSdk = 21
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildFeatures {
+        aidl = false
+        buildConfig = false
+        renderScript = false
+        shaders = false
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -18,11 +32,9 @@ android {
     }
 }
 
+
 dependencies {
-
-    implementation(project(mapOf("path" to ":core-data")))
-    implementation(project(mapOf("path" to ":core-model")))
-
+    implementation(libs.kotlinx.coroutines.android)
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 }

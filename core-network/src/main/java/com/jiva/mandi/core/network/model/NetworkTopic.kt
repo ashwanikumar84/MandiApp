@@ -14,12 +14,20 @@
  * limitations under the License.
  */
 
-package com.jiva.mandi.core.domain
+package com.jiva.mandi.core.network.model
 
+import kotlinx.serialization.Serializable
 
 /**
- * A [topic] with the additional information for whether or not it is followed.
+ * Network representation of [Topic]
  */
-data class FollowableTopic( // TODO consider changing to UserTopic and flattening
-    val isFollowed: Boolean,
+@Serializable
+data class NetworkTopic(
+    val id: String,
+    val name: String = "",
+    val shortDescription: String = "",
+    val longDescription: String = "",
+    val url: String = "",
+    val imageUrl: String = "",
+    val followed: Boolean = false,
 )

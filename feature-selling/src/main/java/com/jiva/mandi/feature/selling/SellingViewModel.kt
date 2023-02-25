@@ -43,9 +43,6 @@ class SellingViewModel @Inject constructor(
      */
 //    val sellignUiState: StateFlow<SellingUiState>
 
-
-//    val plant = plantRepository.getPlant(plantId).asLiveData()
-//    val newsResource = getUserNewsResourcesUseCase.
     val newsResource = newsRepository.getNewsResources().asLiveData()
 }
 

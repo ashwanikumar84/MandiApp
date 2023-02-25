@@ -1,7 +1,7 @@
 package com.jiva.mandi.core.data.repository
 
 import com.jiva.mandi.core.data.Syncable
-import com.jiva.mandi.core.data.model.NewsResource
+import com.jiva.mandi.core.model.data.NewsResource
 import kotlinx.coroutines.flow.Flow
 
 
@@ -23,7 +23,12 @@ interface NewsRepository : Syncable {
     /**
      * Returns available news resources as a stream.
      */
-    fun getNewsResources(): Flow<List<NewsResource>>
+    fun getNewsResources(
+        query: NewsResourceQuery = NewsResourceQuery(
+            filterTopicIds = null,
+            filterNewsIds = null,
+        ),
+    ): Flow<List<NewsResource>>
 
 }
 

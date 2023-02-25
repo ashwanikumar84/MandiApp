@@ -1,4 +1,12 @@
 //buildscript {
+//    repositories {
+//        google()
+//        mavenCentral()
+//
+//    }
+//}
+
+//buildscript {
 //    ext {
 //        compose_version = '1.1.1'
 //    }

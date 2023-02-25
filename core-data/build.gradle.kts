@@ -5,7 +5,6 @@ plugins {
     alias(libs.plugins.kotlin.kapt)
 }
 
-
 android {
     namespace = "com.jiva.mandi.core.data"
     compileSdk = 33
@@ -34,16 +33,18 @@ android {
 }
 
 dependencies {
-//    implementation(project(mapOf("path" to ":core-model")))
     implementation(project(mapOf("path" to ":core-network")))
+    implementation(project(mapOf("path" to ":core-model")))
+    implementation(project(mapOf("path" to ":core-common")))
 
     // Arch Components
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.serialization.json)
 
     // Local tests: jUnit, coroutines, Android runner
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
-//    implementation(libs.kotlinx.serialization.json)
 }

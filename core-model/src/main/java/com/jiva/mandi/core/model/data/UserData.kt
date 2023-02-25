@@ -14,16 +14,14 @@
  * limitations under the License.
  */
 
-package com.jiva.mandi.core.data.model
+package com.jiva.mandi.core.model.data
 
-import com.jiva.mandi.core.model.data.NewsResource
-import com.jiva.mandi.core.network.model.NetworkNewsResource
-
-fun NetworkNewsResource.asEntity() = NewsResource(
-    id = id,
-    title = title,
-    content = content,
-    url = url,
-    headerImageUrl = headerImageUrl,
-    topics = listOf(),
+/**
+ * Class summarizing user interest data
+ */
+data class UserData(
+    val bookmarkedNewsResources: Set<String>,
+    val followedTopics: Set<String>,
+    val useDynamicColor: Boolean,
+    val shouldHideOnboarding: Boolean,
 )

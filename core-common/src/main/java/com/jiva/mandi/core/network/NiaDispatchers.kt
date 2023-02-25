@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.jiva.mandi.core.data.model
+package com.jiva.mandi.core.network
 
-import com.jiva.mandi.core.model.data.NewsResource
-import com.jiva.mandi.core.network.model.NetworkNewsResource
+import javax.inject.Qualifier
+import kotlin.annotation.AnnotationRetention.RUNTIME
 
-fun NetworkNewsResource.asEntity() = NewsResource(
-    id = id,
-    title = title,
-    content = content,
-    url = url,
-    headerImageUrl = headerImageUrl,
-    topics = listOf(),
-)
+@Qualifier
+@Retention(RUNTIME)
+annotation class Dispatcher(val niaDispatcher: NiaDispatchers)
+
+enum class NiaDispatchers {
+    IO,
+}

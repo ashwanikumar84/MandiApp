@@ -1,7 +1,6 @@
 package com.jiva.mandi.feature.selling
 
 import android.util.Log
-import android.widget.Toast
 import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.livedata.observeAsState
@@ -12,7 +11,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 fun SellingScreen(sellingViewModel: SellingViewModel = hiltViewModel()) {
 
     val newsResource = sellingViewModel.newsResource.observeAsState()
-        Log.e("value", "inside SellingScreen---------------")
+    Log.e("value", "inside SellingScreen---------------")
 
 }
 
@@ -22,7 +21,5 @@ internal fun SellingButton() {
     Button(onClick = { /*TODO*/
         Log.e("value", "inside SellingScreen button---------------")
     }) {
-//        Toast.makeText(, "hello",Toast.LENGTH_LONG).show()
-
     }
 }

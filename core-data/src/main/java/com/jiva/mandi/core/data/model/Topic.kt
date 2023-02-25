@@ -16,14 +16,14 @@
 
 package com.jiva.mandi.core.data.model
 
-import com.jiva.mandi.core.model.data.NewsResource
-import com.jiva.mandi.core.network.model.NetworkNewsResource
+import com.jiva.mandi.core.network.model.NetworkTopic
 
-fun NetworkNewsResource.asEntity() = NewsResource(
-    id = id,
-    title = title,
-    content = content,
-    url = url,
-    headerImageUrl = headerImageUrl,
-    topics = listOf(),
-)
+
+//fun NetworkTopic.asEntity() = TopicEntity(
+//    id = id,
+//    name = name,
+//    shortDescription = shortDescription,
+//    longDescription = longDescription,
+//    url = url,
+//    imageUrl = imageUrl,
+//)

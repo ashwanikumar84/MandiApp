@@ -14,16 +14,21 @@
  * limitations under the License.
  */
 
-package com.jiva.mandi.core.data.model
+package com.jiva.mandi.core.network.di
 
-import com.jiva.mandi.core.model.data.NewsResource
-import com.jiva.mandi.core.network.model.NetworkNewsResource
+import com.jiva.mandi.core.network.Dispatcher
+import com.jiva.mandi.core.network.NiaDispatchers.IO
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 
-fun NetworkNewsResource.asEntity() = NewsResource(
-    id = id,
-    title = title,
-    content = content,
-    url = url,
-    headerImageUrl = headerImageUrl,
-    topics = listOf(),
-)
+@Module
+@InstallIn(SingletonComponent::class)
+object DispatchersModule {
+    @Provides
+    @Dispatcher(IO)
+    fun providesIODispatcher(): CoroutineDispatcher = Dispatchers.IO
+}

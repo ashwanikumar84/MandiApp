@@ -14,16 +14,24 @@
  * limitations under the License.
  */
 
-package com.jiva.mandi.core.data.model
+package com.jiva.mandi.core.result
 
-import com.jiva.mandi.core.model.data.NewsResource
-import com.jiva.mandi.core.network.model.NetworkNewsResource
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 
-fun NetworkNewsResource.asEntity() = NewsResource(
-    id = id,
-    title = title,
-    content = content,
-    url = url,
-    headerImageUrl = headerImageUrl,
-    topics = listOf(),
-)
+sealed interface Result<out T> {
+    data class Success<T>(val data: T) : Result<T>
+    data class Error(val exception: Throwable? = null) : Result<Nothing>
+    object Loading : Result<Nothing>
+}
+
+fun <T> Flow<T>.asResult(): Flow<Result<T>> {
+    return this
+        .map<T, Result<T>> {
+            Result.Success(it)
+        }
+        .onStart { emit(Result.Loading) }
+        .catch { emit(Result.Error(it)) }
+}

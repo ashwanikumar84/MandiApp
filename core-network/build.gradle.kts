@@ -30,7 +30,8 @@ android {
 }
 
 dependencies {
-
+    implementation(project(mapOf("path" to ":core-common")))
+    implementation(project(mapOf("path" to ":core-model")))
 
     // Arch Components
     implementation(libs.hilt.android)

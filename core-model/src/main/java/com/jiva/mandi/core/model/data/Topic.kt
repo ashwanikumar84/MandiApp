@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.jiva.mandi.core.data.model
+package com.jiva.mandi.core.model.data
 
-import com.jiva.mandi.core.model.data.NewsResource
-import com.jiva.mandi.core.network.model.NetworkNewsResource
-
-fun NetworkNewsResource.asEntity() = NewsResource(
-    id = id,
-    title = title,
-    content = content,
-    url = url,
-    headerImageUrl = headerImageUrl,
-    topics = listOf(),
+/**
+ * External data layer representation of a NiA Topic
+ */
+data class Topic(
+    val id: String,
+    val name: String,
+    val shortDescription: String,
+    val longDescription: String,
+    val url: String,
+    val imageUrl: String,
 )

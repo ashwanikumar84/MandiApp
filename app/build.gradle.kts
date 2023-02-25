@@ -59,8 +59,7 @@ android {
 
 dependencies {
 
-//    implementation(project(":core:model"))
-//    implementation(project(mapOf("path" to ":core-model")))
+//    implementation(project(mapOf("path" to ":feature-selling")))
 
     // Core Android dependencies
     implementation(libs.androidx.core.ktx)
