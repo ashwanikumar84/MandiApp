@@ -7,10 +7,17 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 
-@Composable
-fun SellingScreen(sellingViewModel: SellingViewModel = hiltViewModel()) {
+//@Composable
+//fun SellingScreen(sellingViewModel: SellingViewModel = hiltViewModel()) {
+//
+//    val newsResource = sellingViewModel.newsResource.observeAsState()
+//    Log.e("value", "inside SellingScreen---------------")
+//
+//}
 
-    val newsResource = sellingViewModel.newsResource.observeAsState()
+@Composable
+fun SellingScreen() {
+
     Log.e("value", "inside SellingScreen---------------")
 
 }

@@ -3,8 +3,8 @@ package com.jiva.mandi.feature.selling
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.jiva.mandi.core.data.repository.NewsRepository
-import com.jiva.mandi.core.domain.GetUserNewsResourcesUseCase
+//import com.jiva.mandi.core.data.repository.NewsRepository
+//import com.jiva.mandi.core.domain.GetUserNewsResourcesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.observeOn
@@ -26,9 +26,9 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class SellingViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle,
+    savedStateHandle: SavedStateHandle/*,
     private val newsRepository: NewsRepository,
-    getUserNewsResourcesUseCase: GetUserNewsResourcesUseCase
+    getUserNewsResourcesUseCase: GetUserNewsResourcesUseCase*/
 ) :
     ViewModel() {
 
@@ -43,7 +43,7 @@ class SellingViewModel @Inject constructor(
      */
 //    val sellignUiState: StateFlow<SellingUiState>
 
-    val newsResource = newsRepository.getNewsResources().asLiveData()
+//    val newsResource = newsRepository.getNewsResources().asLiveData()
 }
 
 sealed interface SellingUiState {
